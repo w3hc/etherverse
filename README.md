@@ -1,4 +1,4 @@
-# Genji
+# Etherverse
 
 A Next.js Web3 app template.
 
@@ -13,7 +13,7 @@ pnpm i
 Create a `.env` file:
 
 ```
-cp .env.example .env
+cp .env.template .env
 ```
 
 Add your own keys in the `.env` file (you can get it in your [Reown dashboard](https://cloud.reown.com/)), then:
