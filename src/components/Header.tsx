@@ -43,7 +43,7 @@ export default function Header() {
       <Flex justify="space-between" align="center" px={4}>
         <Link href="/">
           <Heading as="h3" size="md" textAlign="center">
-            Genji
+            Etherverse
           </Heading>
         </Link>
         <Flex gap={2} align="center">
@@ -87,8 +87,11 @@ export default function Header() {
               size="sm"
             />
             <MenuList>
-              <Link href="/new" color="white">
-                <MenuItem fontSize="md">New page</MenuItem>
+              <Link href="/eip-7702" color="white">
+                <MenuItem fontSize="md">EIP-7702</MenuItem>
+              </Link>
+              <Link href="/chat" color="white">
+                <MenuItem fontSize="md">Chat</MenuItem>
               </Link>
             </MenuList>
           </Menu>

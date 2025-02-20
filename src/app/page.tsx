@@ -1,126 +1,116 @@
 'use client'
 
-import { Container, Text, useToast, Button, Tooltip } from '@chakra-ui/react'
-import { useAppKitAccount, useAppKitNetwork, useAppKitProvider } from '@reown/appkit/react'
-import { BrowserProvider, parseEther, formatEther } from 'ethers'
-import { useState, useEffect } from 'react'
+import {
+  Container,
+  VStack,
+  Heading,
+  Text,
+  Button,
+  Box,
+  SimpleGrid,
+  Card,
+  CardBody,
+  Stack,
+  Image,
+  Center,
+} from '@chakra-ui/react'
 import Link from 'next/link'
 
+const topics = [
+  {
+    title: 'Solo Staking',
+    description: 'Participate in securing Ethereum through decentralized validation',
+  },
+  {
+    title: 'ETH as an Asset',
+    description: "Strengthen Ethereum's position as a foundational digital asset",
+  },
+  {
+    title: 'Unifying L2s',
+    description: 'Build a cohesive multi-chain ecosystem through standardization',
+  },
+]
+
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(false)
-  const [txLink, setTxLink] = useState<string>()
-  const [txHash, setTxHash] = useState<string>()
-  const [balance, setBalance] = useState<string>('0')
-
-  const { address, isConnected } = useAppKitAccount()
-  const { walletProvider } = useAppKitProvider('eip155')
-  const toast = useToast()
-
-  useEffect(() => {
-    const checkBalance = async () => {
-      if (address && walletProvider) {
-        try {
-          const provider = new BrowserProvider(walletProvider as any)
-          const balance = await provider.getBalance(address)
-          setBalance(formatEther(balance))
-        } catch (error) {
-          console.error('Error fetching balance:', error)
-        }
-      }
-    }
-
-    checkBalance()
-  }, [address, walletProvider])
-
-  const handleSend = async () => {
-    setTxHash('')
-    setTxLink('')
-    if (!address || !walletProvider) {
-      toast({
-        title: 'Not connected',
-        description: 'Please connect your wallet',
-        status: 'error',
-        duration: 5000,
-        isClosable: true,
-      })
-      return
-    }
-
-    setIsLoading(true)
-    try {
-      const provider = new BrowserProvider(walletProvider as any)
-      const signer = await provider.getSigner()
-
-      const tx = await signer.sendTransaction({
-        to: address,
-        value: parseEther('0.0001'),
-      })
-
-      const receipt = await tx.wait(1)
-
-      setTxHash(receipt?.hash)
-      setTxLink('https://sepolia.etherscan.io/tx/' + receipt?.hash)
-
-      toast({
-        title: 'Transaction successful',
-        description: `Sent 0.0001 ETH to ${address}`,
-        status: 'success',
-        duration: 5000,
-        isClosable: true,
-      })
-    } catch (error) {
-      console.error('Transaction failed:', error)
-      toast({
-        title: 'Transaction failed',
-        description: error instanceof Error ? error.message : 'Unknown error occurred',
-        status: 'error',
-        duration: 5000,
-        isClosable: true,
-      })
-    } finally {
-      setIsLoading(false)
-    }
-  }
-
-  const hasEnoughBalance = Number(balance) >= 0.0001
-
   return (
-    <Container maxW="container.sm" py={20}>
-      <Text mb={4}>Hello world!</Text>
-      {isConnected && (
-        <Tooltip
-          label={!hasEnoughBalance ? 'Please connect with an account that has a bit of ETH' : ''}
-          isDisabled={hasEnoughBalance}
-          hasArrow
-          bg="black"
-          color="white"
-          borderWidth="1px"
-          borderColor="red.500"
-          borderRadius="md"
-          p={2}
-        >
-          <Button
-            onClick={handleSend}
-            isLoading={isLoading}
-            loadingText="Sending..."
-            bg="#45a2f8"
-            color="white"
-            _hover={{
-              bg: '#3182ce',
-            }}
-            isDisabled={!hasEnoughBalance}
-          >
-            Send 0.0001 ETH to self
-          </Button>
-        </Tooltip>
-      )}
-      {txHash && isConnected && (
-        <Text py={4} fontSize="14px" color="#45a2f8">
-          <Link target="_blank" rel="noopener noreferrer" href={txLink ? txLink : ''}>
-            {txHash}
-          </Link>
+    <Container maxW="container.xl" py={20}>
+      {/* Hero Section */}
+      <VStack spacing={8} align="stretch" mb={16}>
+        <Heading as="h1" size="2xl" textAlign="center">
+          Unite Ethereum
+        </Heading>
+        <Text fontSize="xl" textAlign="center" color="gray.400" maxW="800px" mx="auto">
+          Advancing Ethereum through protocol improvements and standardization. Together we build a
+          more unified, secure, and scalable blockchain ecosystem.
         </Text>
-      )}
+        <Box textAlign="center">
+          <Link href="/eip-7702">
+            <Button
+              size="lg"
+              bg="#8c1c84"
+              color="white"
+              _hover={{
+                bg: '#6d1566',
+              }}
+            >
+              Explore EIP-7702
+            </Button>
+          </Link>
+        </Box>
+      </VStack>
+      {/* Topics Grid */}
+      <Box mb={16}>
+        {/* <Heading as="h2" size="xl" mb={8}>
+          Strategic Initiatives
+        </Heading> */}
+        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+          {topics.map((topic, index) => (
+            <Card key={index} bg="whiteAlpha.100" borderRadius="lg">
+              <CardBody>
+                <Stack spacing={4}>
+                  <Heading as="h3" size="md">
+                    {topic.title}
+                  </Heading>
+                  <Text color="gray.400">{topic.description}</Text>
+                </Stack>
+              </CardBody>
+            </Card>
+          ))}
+        </SimpleGrid>
+      </Box>
+      {/* Knowledge Base Section */}
+      {/* <VStack spacing={8} align="stretch" mb={16}>
+        <Box>
+          <Heading as="h2" size="xl" mb={4}>
+            Knowledge Hub
+          </Heading>
+          <Text color="gray.400">
+            Access comprehensive resources and documentation about Ethereum protocol improvements
+            and ecosystem development.
+          </Text>
+        </Box>
+
+        <Box>
+          <Heading as="h2" size="xl" mb={4}>
+            Governance
+          </Heading>
+          <Text color="gray.400">
+            Participate in shaping Ethereum&apos;s future through transparent and decentralized
+            decision-making processes.
+          </Text>
+        </Box>
+      </VStack> */}
+      {/* Logo */}
+      <Center mt={20}>
+        <Box p={4}>
+          <Image
+            src="https://bafkreid5xwxz4bed67bxb2wjmwsec4uhlcjviwy7pkzwoyu5oesjd3sp64.ipfs.w3s.link"
+            alt="Ethereum Logo"
+            boxSize="200px" // Reduces the image size
+            objectFit="contain"
+          />
+        </Box>
+      </Center>
     </Container>
   )
 }
