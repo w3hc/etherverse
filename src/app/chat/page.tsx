@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import remarkGfm from 'remark-gfm'
+import { useAppKitAccount } from '@reown/appkit/react'
 
 interface Message {
   text: string
@@ -89,6 +90,8 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message, isUser, txHash, expl
 
 export default function Chat() {
   const toast = useToast()
+  const { address } = useAppKitAccount()
+
   const [messages, setMessages] = useState<Message[]>([])
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
@@ -98,7 +101,7 @@ export default function Chat() {
   useEffect(() => {
     setMessages([
       {
-        text: `Hello! You can ask any question about the future of Ethereum, upcoming upgrades, how you can contribute, etc. You can ask 3 quesitons max per hour. Enjoy!`,
+        text: `Hello! You can ask any question about the future of Ethereum, upcoming upgrades, how you can contribute, etc. Enjoy!`,
         isUser: false,
       },
     ])
@@ -128,6 +131,7 @@ export default function Chat() {
     setInputValue('')
     setIsTyping(true)
 
+    console.log('user address:', address)
     try {
       const response = await fetch('/api/ask', {
         method: 'POST',
@@ -138,6 +142,7 @@ export default function Chat() {
           message: inputValue,
           context: 'etherverse',
           sessionId: sessionId || '',
+          address: address || '0x5c527b6950F9FF2144eD138bCB1adDE703f81Af3',
         }),
       })
 
@@ -219,7 +224,7 @@ export default function Chat() {
             <Input
               value={inputValue}
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInputValue(e.target.value)}
-              placeholder="Type your message..."
+              placeholder="What can I do to help Ethereum thrive?"
               size="lg"
               borderColor="gray.700"
               _focus={{
