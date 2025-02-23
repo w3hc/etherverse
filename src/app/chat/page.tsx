@@ -136,7 +136,7 @@ export default function Chat() {
         },
         body: JSON.stringify({
           message: inputValue,
-          context: 'rukh',
+          context: 'etherverse',
           sessionId: sessionId || '12345',
         }),
       })
