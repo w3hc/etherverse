@@ -21,15 +21,9 @@ export async function OPTIONS() {
 }
 
 export async function POST(request: NextRequest) {
-  console.log('📝 Incoming request:', {
-    method: request.method,
-    url: request.url,
-    timestamp: new Date().toISOString(),
-  })
-
   try {
     const body = await request.json()
-    const { message, sessionId, context } = body
+    const { message, sessionId, context, address } = body
 
     if (!message) {
       console.warn('❌ Missing message in request body')
@@ -46,6 +40,7 @@ export async function POST(request: NextRequest) {
       message,
       context: context || 'etherverse',
       sessionId: sessionId || '',
+      walletAddress: address || '',
     }
 
     console.log('📡 Sending request to Rukh API...', {
@@ -70,7 +65,7 @@ export async function POST(request: NextRequest) {
         statusText: response.statusText,
         error: errorText,
       })
-      // Handle rate limit specifically
+
       if (response.status === 429) {
         return NextResponse.json(
           {
