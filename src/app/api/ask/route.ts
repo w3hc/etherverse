@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-const RUKH_API_URL = 'https://rukh.w3hc.org'
-
 interface RukhResponse {
   network: string
   model: string
@@ -46,16 +44,16 @@ export async function POST(request: NextRequest) {
 
     const payload = {
       message,
-      context: context || 'rukh',
-      sessionId: sessionId || '12345',
+      context: context || 'etherverse',
+      sessionId: sessionId || '',
     }
 
     console.log('📡 Sending request to Rukh API...', {
-      url: RUKH_API_URL,
+      url: process.env.RUKH_API_URL,
       payload,
     })
 
-    const response = await fetch(RUKH_API_URL + '/ask', {
+    const response = await fetch(process.env.RUKH_API_URL + '/ask', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
