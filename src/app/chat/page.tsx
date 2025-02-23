@@ -137,7 +137,7 @@ export default function Chat() {
         body: JSON.stringify({
           message: inputValue,
           context: 'etherverse',
-          sessionId: sessionId || '12345',
+          sessionId: sessionId || '',
         }),
       })
 
@@ -178,7 +178,7 @@ export default function Chat() {
       })
 
       const errorMessage: Message = {
-        text: 'Sorry, I encountered an error processing your request. Please try again.',
+        text: 'Sorry, there was an error processing your request. Please try again a bit later.',
         isUser: false,
       }
       setMessages(prev => [...prev, errorMessage])
