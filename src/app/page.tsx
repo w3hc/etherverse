@@ -37,12 +37,12 @@ export default function Home() {
       {/* Hero Section */}
       <VStack spacing={8} align="stretch" mb={16}>
         <Heading as="h1" size="2xl" textAlign="center">
-          Unite Ethereum
+          Coming soon
         </Heading>
-        <Text fontSize="xl" textAlign="center" color="gray.400" maxW="800px" mx="auto">
+        {/* <Text fontSize="xl" textAlign="center" color="gray.400" maxW="800px" mx="auto">
           Advancing Ethereum through protocol improvements and standardization. Together we build a
           more unified, secure, and scalable blockchain ecosystem.
-        </Text>
+        </Text> */}
         <Box textAlign="center">
           <Link href="/eip-7702">
             <Button
@@ -63,7 +63,7 @@ export default function Home() {
         {/* <Heading as="h2" size="xl" mb={8}>
           Strategic Initiatives
         </Heading> */}
-        <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
+        {/* <SimpleGrid columns={{ base: 1, md: 3 }} spacing={8}>
           {topics.map((topic, index) => (
             <Card key={index} bg="whiteAlpha.100" borderRadius="lg">
               <CardBody>
@@ -76,7 +76,7 @@ export default function Home() {
               </CardBody>
             </Card>
           ))}
-        </SimpleGrid>
+        </SimpleGrid> */}
       </Box>
       {/* Knowledge Base Section */}
       {/* <VStack spacing={8} align="stretch" mb={16}>
