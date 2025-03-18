@@ -39,6 +39,7 @@ export async function POST(request: NextRequest) {
     const payload = {
       message,
       context: context || 'etherverse',
+      model: 'anthropic',
       sessionId: sessionId || '',
       walletAddress: address || '',
     }
