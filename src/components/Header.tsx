@@ -16,11 +16,27 @@ import { useAppKit } from '@reown/appkit/react'
 import { useAppKitAccount, useDisconnect } from '@reown/appkit/react'
 import Link from 'next/link'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import { useState, useEffect } from 'react'
 
 export default function Header() {
   const { open } = useAppKit()
   const { isConnected, address } = useAppKitAccount()
   const { disconnect } = useDisconnect()
+
+  const [scrollPosition, setScrollPosition] = useState(0)
+
+  const shouldSlide = scrollPosition > 0
+  const leftSlideValue = shouldSlide ? 2000 : 0
+  const rightSlideValue = shouldSlide ? 2000 : 0
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   const handleConnect = () => {
     try {
@@ -41,12 +57,20 @@ export default function Header() {
   return (
     <Box as="header" py={4} position="fixed" w="100%" top={0} zIndex={10}>
       <Flex justify="space-between" align="center" px={4}>
-        <Link href="/">
-          <Heading as="h3" size="md" textAlign="center">
-            Etherverse
-          </Heading>
-        </Link>
-        <Flex gap={2} align="center">
+        <Box transform={`translateX(-${leftSlideValue}px)`} transition="transform 0.5s ease-in-out">
+          <Link href="/">
+            <Heading as="h3" size="md" textAlign="center">
+              Etherverse
+            </Heading>
+          </Link>
+        </Box>
+
+        <Flex
+          gap={2}
+          align="center"
+          transform={`translateX(${rightSlideValue}px)`}
+          transition="transform 0.5s ease-in-out"
+        >
           {!isConnected ? (
             <Button
               bg="#8c1c84"
@@ -92,6 +116,9 @@ export default function Header() {
               </Link>
               <Link href="/chat" color="white">
                 <MenuItem fontSize="md">Chat</MenuItem>
+              </Link>
+              <Link href="/awesome-ethereum" color="white">
+                <MenuItem fontSize="md">Awesome Ethereum</MenuItem>
               </Link>
             </MenuList>
           </Menu>
