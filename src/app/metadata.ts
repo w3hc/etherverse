@@ -1,23 +1,24 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Etherverse',
-  description: 'Unite Ethereum',
+  metadataBase: new URL('https://w3pk.w3hc.org'),
 
-  keywords: ['Web3', 'Next.js', 'Ethereum', 'DApp', 'Blockchain', 'Wallet', 'eip-7702'],
-  authors: [{ name: 'Julien', url: 'https://github.com/julienbrg' }],
+  title: 'Etherverse',
+  description: 'Welcome to the crypto space!',
+
+  keywords: ['Etherverse', 'w3pk', 'WebAuthn', 'Next.js', 'Web3', 'Ethereum'],
+  authors: [{ name: 'W3HC', url: 'https://github.com/w3hc' }],
 
   openGraph: {
     title: 'Etherverse',
-    description: 'Unite Ethereum',
-    url: 'https://etherverse.dev',
+    description: 'Welcome to the crypto space!',
     siteName: 'Etherverse',
     images: [
       {
         url: '/huangshan.png',
         width: 1200,
         height: 630,
-        alt: 'Huangshan',
+        alt: 'Welcome to the crypto space!',
       },
     ],
     locale: 'en_US',
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Etherverse',
-    description: 'Unite Ethereum',
+    description: 'Welcome to the crypto space!',
     images: ['/huangshan.png'],
     creator: '@julienbrg',
   },
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     },
   },
 
-  // verification: {
-  //   google: 'your-google-site-verification',
-  // },
+  verification: {
+    google: 'your-google-site-verification',
+  },
 }
