@@ -1,7 +1,18 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Box, VStack, Heading, Text, SimpleGrid, Flex, Badge, Spinner, Center, Stack } from '@chakra-ui/react'
+import {
+  Box,
+  VStack,
+  Heading,
+  Text,
+  SimpleGrid,
+  Flex,
+  Badge,
+  Spinner,
+  Center,
+  Stack,
+} from '@chakra-ui/react'
 import { Input } from '@/components/ui/input'
 import { toaster } from '@/components/ui/toaster'
 import { FiSearch, FiExternalLink } from 'react-icons/fi'
@@ -136,7 +147,14 @@ export default function Home() {
           <>
             {/* Search */}
             <Box maxW="600px" mx="auto" w="full" position="relative">
-              <Box position="absolute" left="3" top="50%" transform="translateY(-50%)" pointerEvents="none" zIndex={1}>
+              <Box
+                position="absolute"
+                left="3"
+                top="50%"
+                transform="translateY(-50%)"
+                pointerEvents="none"
+                zIndex={1}
+              >
                 <FiSearch color="gray" />
               </Box>
               <Input
@@ -188,7 +206,12 @@ export default function Home() {
                             style={{ textDecoration: 'none', display: 'block', cursor: 'pointer' }}
                           >
                             <Flex align="center" gap={2}>
-                              <Heading as="h3" size="md" color="white" _hover={{ color: '#8c1c84' }}>
+                              <Heading
+                                as="h3"
+                                size="md"
+                                color="white"
+                                _hover={{ color: '#8c1c84' }}
+                              >
                                 {resource.name}
                               </Heading>
                               <FiExternalLink size={14} />
@@ -214,8 +237,8 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: '#45a2f8', cursor: 'pointer', textDecoration: 'none' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = '#8c1c84')}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = '#45a2f8')}
+                  onMouseEnter={e => (e.currentTarget.style.color = '#8c1c84')}
+                  onMouseLeave={e => (e.currentTarget.style.color = '#45a2f8')}
                 >
                   Visit the GitHub repository{' '}
                   <FiExternalLink size={12} style={{ display: 'inline', marginLeft: '4px' }} />
