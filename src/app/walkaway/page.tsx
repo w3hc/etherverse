@@ -97,6 +97,13 @@ export default function WalkawayPage() {
             </HStack>
           </Link>
         </Box>
+
+        <Box maxW="600px" mx="auto" w="full" pt={8} borderTop="1px solid" borderColor="gray.700">
+          <Heading as="h2" size="md" mb={2}>
+            {t.walkaway.whatIsTitle}
+          </Heading>
+          <Text color="gray.400">{t.walkaway.whatIsBody}</Text>
+        </Box>
       </VStack>
     </Box>
   )
