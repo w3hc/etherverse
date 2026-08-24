@@ -370,8 +370,9 @@ type TranslationKeys = {
     placeholder: string
     testButton: string
     invalidUrlError: string
-    comingSoonTitle: string
-    comingSoonDescription: string
+    errorTitle: string
+    errorDescription: string
+    generatingHint: string
     whatIsTitle: string
     whatIsBody: string
   }
@@ -796,8 +797,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: 'Test',
       invalidUrlError: 'Please enter a valid URL',
-      comingSoonTitle: 'Coming soon',
-      comingSoonDescription: "The Walk-away test checker isn't implemented yet.",
+      errorTitle: 'Something went wrong',
+      errorDescription: 'We could not generate the report. Please try again.',
+      generatingHint: 'Analyzing the project — this can take a minute or two…',
       whatIsTitle: 'What is the walk-away test?',
       whatIsBody:
         'A project passes if it keeps working after everyone leaves — the team quits, the company shuts down, the servers go dark. It should be a tool you own, not a service you depend on.',
@@ -1196,8 +1198,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: '测试',
       invalidUrlError: '请输入有效的网址',
-      comingSoonTitle: '即将推出',
-      comingSoonDescription: 'Walk-away test 检查器尚未实现。',
+      errorTitle: '出错了',
+      errorDescription: '无法生成报告，请重试。',
+      generatingHint: '正在分析项目，可能需要一两分钟……',
       whatIsTitle: '什么是 Walk-away test？',
       whatIsBody:
         '如果一个项目在所有人离开后依然能正常运作——团队解散、公司倒闭、服务器关闭——它就通过了测试。它应该是你拥有的工具，而不是你依赖的服务。',
@@ -1628,8 +1631,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: 'टेस्ट करें',
       invalidUrlError: 'कृपया एक मान्य यूआरएल दर्ज करें',
-      comingSoonTitle: 'जल्द आ रहा है',
-      comingSoonDescription: 'Walk-away test चेकर अभी लागू नहीं किया गया है।',
+      errorTitle: 'कुछ गड़बड़ हो गई',
+      errorDescription: 'रिपोर्ट जनरेट नहीं की जा सकी। कृपया पुनः प्रयास करें।',
+      generatingHint: 'प्रोजेक्ट का विश्लेषण किया जा रहा है — इसमें एक या दो मिनट लग सकते हैं…',
       whatIsTitle: 'Walk-away test क्या है?',
       whatIsBody:
         'कोई प्रोजेक्ट तब पास होता है जब सब कुछ छोड़ने के बाद भी वह काम करता रहे — टीम चली जाए, कंपनी बंद हो जाए, सर्वर बंद हो जाएं। यह एक ऐसा टूल होना चाहिए जिसका आप मालिक हों, न कि एक सेवा जिस पर आप निर्भर हों।',
@@ -2073,8 +2077,9 @@ export const translations: Translations = {
       placeholder: 'https://ejemplo.com',
       testButton: 'Probar',
       invalidUrlError: 'Introduce una URL válida',
-      comingSoonTitle: 'Próximamente',
-      comingSoonDescription: 'El comprobador del Walk-away test aún no está implementado.',
+      errorTitle: 'Algo salió mal',
+      errorDescription: 'No se pudo generar el informe. Inténtalo de nuevo.',
+      generatingHint: 'Analizando el proyecto — esto puede tardar uno o dos minutos…',
       whatIsTitle: '¿Qué es el walk-away test?',
       whatIsBody:
         'Un proyecto lo supera si sigue funcionando después de que todos se vayan: el equipo se marcha, la empresa cierra, los servidores se apagan. Debe ser una herramienta que posees, no un servicio del que dependes.',
@@ -2521,8 +2526,9 @@ export const translations: Translations = {
       placeholder: 'https://exemple.com',
       testButton: 'Tester',
       invalidUrlError: 'Veuillez saisir une URL valide',
-      comingSoonTitle: 'Bientôt disponible',
-      comingSoonDescription: "Le vérificateur du Walk-away test n'est pas encore implémenté.",
+      errorTitle: "Une erreur s'est produite",
+      errorDescription: 'Impossible de générer le rapport. Veuillez réessayer.',
+      generatingHint: 'Analyse du projet en cours — cela peut prendre une à deux minutes…',
       whatIsTitle: "Qu'est-ce que le walk-away test ?",
       whatIsBody:
         "Un projet le réussit s'il continue de fonctionner après que tout le monde soit parti : l'équipe abandonne, l'entreprise ferme, les serveurs s'éteignent. Ce doit être un outil que vous possédez, pas un service dont vous dépendez.",
@@ -2938,8 +2944,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: 'اختبار',
       invalidUrlError: 'يرجى إدخال رابط صالح',
-      comingSoonTitle: 'قريبًا',
-      comingSoonDescription: 'أداة فحص Walk-away test غير مُفعّلة بعد.',
+      errorTitle: 'حدث خطأ ما',
+      errorDescription: 'تعذّر إنشاء التقرير. يرجى المحاولة مرة أخرى.',
+      generatingHint: 'جارٍ تحليل المشروع — قد يستغرق ذلك دقيقة أو دقيقتين…',
       whatIsTitle: 'ما هو Walk-away test؟',
       whatIsBody:
         'ينجح المشروع في الاختبار إذا استمر في العمل بعد رحيل الجميع — يترك الفريق، تُغلق الشركة، تُطفأ الخوادم. يجب أن يكون أداة تملكها، لا خدمة تعتمد عليها.',
@@ -3379,8 +3386,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: 'পরীক্ষা করুন',
       invalidUrlError: 'একটি বৈধ ইউআরএল লিখুন',
-      comingSoonTitle: 'শীঘ্রই আসছে',
-      comingSoonDescription: 'Walk-away test চেকার এখনও তৈরি করা হয়নি।',
+      errorTitle: 'কিছু ভুল হয়েছে',
+      errorDescription: 'রিপোর্ট তৈরি করা যায়নি। অনুগ্রহ করে আবার চেষ্টা করুন।',
+      generatingHint: 'প্রকল্প বিশ্লেষণ করা হচ্ছে — এতে এক বা দুই মিনিট সময় লাগতে পারে…',
       whatIsTitle: 'Walk-away test কী?',
       whatIsBody:
         'একটি প্রকল্প তখনই পাস করে যখন সবাই চলে যাওয়ার পরও এটি কাজ করতে থাকে — দল চলে যায়, কোম্পানি বন্ধ হয়ে যায়, সার্ভার বন্ধ হয়ে যায়। এটি এমন একটি টুল হওয়া উচিত যার আপনি মালিক, কোনো পরিষেবা নয় যার উপর আপনি নির্ভরশীল।',
@@ -3822,8 +3830,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: 'Проверить',
       invalidUrlError: 'Пожалуйста, введите корректный URL',
-      comingSoonTitle: 'Скоро',
-      comingSoonDescription: 'Инструмент проверки Walk-away test пока не реализован.',
+      errorTitle: 'Что-то пошло не так',
+      errorDescription: 'Не удалось сформировать отчёт. Попробуйте ещё раз.',
+      generatingHint: 'Анализ проекта — это может занять одну-две минуты…',
       whatIsTitle: 'Что такое walk-away test?',
       whatIsBody:
         'Проект проходит тест, если он продолжает работать после того, как все уходят: команда распускается, компания закрывается, серверы отключаются. Это должен быть инструмент, которым вы владеете, а не сервис, от которого вы зависите.',
@@ -4266,8 +4275,9 @@ export const translations: Translations = {
       placeholder: 'https://exemplo.com',
       testButton: 'Testar',
       invalidUrlError: 'Insira uma URL válida',
-      comingSoonTitle: 'Em breve',
-      comingSoonDescription: 'O verificador do Walk-away test ainda não foi implementado.',
+      errorTitle: 'Algo deu errado',
+      errorDescription: 'Não foi possível gerar o relatório. Tente novamente.',
+      generatingHint: 'Analisando o projeto — isso pode levar um ou dois minutos…',
       whatIsTitle: 'O que é o walk-away test?',
       whatIsBody:
         'Um projeto passa se continuar funcionando depois que todos saem: a equipe desiste, a empresa fecha, os servidores são desligados. Deve ser uma ferramenta que você possui, não um serviço do qual você depende.',
@@ -4699,8 +4709,9 @@ export const translations: Translations = {
       placeholder: 'https://example.com',
       testButton: 'ٹیسٹ کریں',
       invalidUrlError: 'براہ کرم ایک درست یو آر ایل درج کریں',
-      comingSoonTitle: 'جلد آ رہا ہے',
-      comingSoonDescription: 'Walk-away test چیکر ابھی تک تیار نہیں کیا گیا۔',
+      errorTitle: 'کچھ غلط ہو گیا',
+      errorDescription: 'رپورٹ تیار نہیں کی جا سکی۔ براہ کرم دوبارہ کوشش کریں۔',
+      generatingHint: 'پراجیکٹ کا تجزیہ کیا جا رہا ہے — اس میں ایک سے دو منٹ لگ سکتے ہیں…',
       whatIsTitle: 'Walk-away test کیا ہے؟',
       whatIsBody:
         'ایک پروجیکٹ اس وقت پاس ہوتا ہے جب سب کے چلے جانے کے بعد بھی وہ کام کرتا رہے — ٹیم چھوڑ دے، کمپنی بند ہو جائے، سرورز بند ہو جائیں۔ یہ ایک ایسا ٹول ہونا چاہیے جس کے آپ مالک ہوں، نہ کہ ایک سروس جس پر آپ منحصر ہوں۔',

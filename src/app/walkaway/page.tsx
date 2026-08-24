@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { Box, VStack, Heading, Text, HStack } from '@chakra-ui/react'
 import { FiExternalLink } from 'react-icons/fi'
@@ -22,25 +23,46 @@ function isValidUrl(value: string): boolean {
 
 export default function WalkawayPage() {
   const t = useTranslation()
+  const router = useRouter()
   const [url, setUrl] = useState('')
   const [touched, setTouched] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const trimmedUrl = url.trim()
   const isInvalid = touched && trimmedUrl.length > 0 && !isValidUrl(trimmedUrl)
-  const canSubmit = trimmedUrl.length > 0 && isValidUrl(trimmedUrl)
+  const canSubmit = trimmedUrl.length > 0 && isValidUrl(trimmedUrl) && !isSubmitting
 
-  const handleTest = () => {
+  const handleTest = async () => {
     setTouched(true)
-    if (!isValidUrl(trimmedUrl)) {
+    if (!isValidUrl(trimmedUrl) || isSubmitting) {
       return
     }
 
-    toaster.create({
-      title: t.walkaway.comingSoonTitle,
-      description: t.walkaway.comingSoonDescription,
-      type: 'info',
-      duration: 4000,
-    })
+    setIsSubmitting(true)
+    try {
+      const response = await fetch('/api/walkaway', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: trimmedUrl }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok || !data.slug) {
+        throw new Error(data.error || 'Unknown error')
+      }
+
+      router.push(`/walkaway/${data.slug}`)
+    } catch (error) {
+      console.error('Walk-away test failed:', error)
+      toaster.create({
+        title: t.walkaway.errorTitle,
+        description: t.walkaway.errorDescription,
+        type: 'error',
+        duration: 5000,
+      })
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -72,6 +94,7 @@ export default function WalkawayPage() {
               size="lg"
               fontSize="lg"
               py={6}
+              disabled={isSubmitting}
             />
           </Field>
 
@@ -81,12 +104,19 @@ export default function WalkawayPage() {
             _hover={{ bg: brandColors.secondary }}
             onClick={handleTest}
             disabled={!canSubmit}
+            loading={isSubmitting}
             size="lg"
             alignSelf="center"
             px={10}
           >
             {t.walkaway.testButton}
           </Button>
+
+          {isSubmitting && (
+            <Text fontSize="sm" color="gray.500" textAlign="center">
+              {t.walkaway.generatingHint}
+            </Text>
+          )}
         </VStack>
 
         <Box textAlign="center">
