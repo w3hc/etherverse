@@ -221,6 +221,11 @@ export default function Header() {
                 <Portal>
                   <MenuPositioner>
                     <MenuContent minWidth="auto">
+                      <MenuItem value="walkaway" fontSize="md" px={4} py={3} asChild>
+                        <Link href="/walkaway" color="white">
+                          {t.navigation.walkaway}
+                        </Link>
+                      </MenuItem>
                       <MenuItem value="settings" fontSize="md" px={4} py={3} asChild>
                         <Link href="/settings" color="white">
                           {t.navigation.settings}

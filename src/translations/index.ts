@@ -32,7 +32,7 @@ type TranslationKeys = {
     greeting: string
     greetingSubtitle: string
   }
-  navigation: { settings: string }
+  navigation: { settings: string; walkaway: string }
   settings: {
     title: string
     loginRequired: string
@@ -364,6 +364,15 @@ type TranslationKeys = {
     required: string
     submit: string
   }
+  walkaway: {
+    title: string
+    explainer: string
+    placeholder: string
+    testButton: string
+    invalidUrlError: string
+    comingSoonTitle: string
+    comingSoonDescription: string
+  }
 }
 
 // Define translations for each supported language
@@ -391,6 +400,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Settings',
+      walkaway: 'Walk-Away Test',
     },
     settings: {
       title: 'Settings',
@@ -777,6 +787,16 @@ export const translations: Translations = {
       required: ' (required)',
       submit: 'Submit',
     },
+    walkaway: {
+      title: 'Walk-Away Test',
+      explainer:
+        'Check if the app or service passes the walk-away test. Which URL should we check?',
+      placeholder: 'https://example.com',
+      testButton: 'Test',
+      invalidUrlError: 'Please enter a valid URL',
+      comingSoonTitle: 'Coming soon',
+      comingSoonDescription: "The walk-away test checker isn't implemented yet.",
+    },
   },
 
   // Mandarin Chinese
@@ -798,6 +818,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: '设置',
+      walkaway: '离场测试',
     },
     settings: {
       title: '设置',
@@ -1164,6 +1185,15 @@ export const translations: Translations = {
       required: '（必需）',
       submit: '提交',
     },
+    walkaway: {
+      title: '离场测试',
+      explainer: '检查该应用或服务是否通过离场测试。我们应该检查哪个网址？',
+      placeholder: 'https://example.com',
+      testButton: '测试',
+      invalidUrlError: '请输入有效的网址',
+      comingSoonTitle: '即将推出',
+      comingSoonDescription: '离场测试检查器尚未实现。',
+    },
   },
 
   // Hindi
@@ -1185,6 +1215,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'सेटिंग्स',
+      walkaway: 'वॉक-अवे टेस्ट',
     },
     settings: {
       title: 'सेटिंग्स',
@@ -1582,6 +1613,15 @@ export const translations: Translations = {
       required: ' (आवश्यक)',
       submit: 'जमा करें',
     },
+    walkaway: {
+      title: 'वॉक-अवे टेस्ट',
+      explainer: 'जांचें कि क्या ऐप या सेवा वॉक-अवे टेस्ट पास करती है। हमें कौन सा यूआरएल जांचना चाहिए?',
+      placeholder: 'https://example.com',
+      testButton: 'टेस्ट करें',
+      invalidUrlError: 'कृपया एक मान्य यूआरएल दर्ज करें',
+      comingSoonTitle: 'जल्द आ रहा है',
+      comingSoonDescription: 'वॉक-अवे टेस्ट चेकर अभी लागू नहीं किया गया है।',
+    },
   },
 
   // Spanish
@@ -1603,6 +1643,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Configuración',
+      walkaway: 'Prueba de abandono',
     },
     settings: {
       title: 'Configuración',
@@ -2013,6 +2054,16 @@ export const translations: Translations = {
       required: ' (requerido)',
       submit: 'Enviar',
     },
+    walkaway: {
+      title: 'Prueba de abandono',
+      explainer:
+        '¿La aplicación o el servicio supera la prueba de abandono? ¿Qué URL deberíamos comprobar?',
+      placeholder: 'https://ejemplo.com',
+      testButton: 'Probar',
+      invalidUrlError: 'Introduce una URL válida',
+      comingSoonTitle: 'Próximamente',
+      comingSoonDescription: 'El comprobador de la prueba de abandono aún no está implementado.',
+    },
   },
 
   // French
@@ -2034,6 +2085,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Paramètres',
+      walkaway: "Test de l'abandon",
     },
     settings: {
       title: 'Paramètres',
@@ -2447,6 +2499,16 @@ export const translations: Translations = {
       required: ' (requis)',
       submit: 'Soumettre',
     },
+    walkaway: {
+      title: "Test de l'abandon",
+      explainer:
+        "Vérifiez si l'application ou le service réussit le test de l'abandon. Quelle URL devrions-nous vérifier ?",
+      placeholder: 'https://exemple.com',
+      testButton: 'Tester',
+      invalidUrlError: 'Veuillez saisir une URL valide',
+      comingSoonTitle: 'Bientôt disponible',
+      comingSoonDescription: "Le vérificateur du test de l'abandon n'est pas encore implémenté.",
+    },
   },
 
   // Arabic
@@ -2468,6 +2530,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'الإعدادات',
+      walkaway: 'اختبار الانسحاب',
     },
     settings: {
       title: 'الإعدادات',
@@ -2850,6 +2913,15 @@ export const translations: Translations = {
       required: ' (مطلوب)',
       submit: 'إرسال',
     },
+    walkaway: {
+      title: 'اختبار الانسحاب',
+      explainer: 'تحقق مما إذا كان التطبيق أو الخدمة يجتاز اختبار الانسحاب. ما هو الرابط الذي يجب أن نتحقق منه؟',
+      placeholder: 'https://example.com',
+      testButton: 'اختبار',
+      invalidUrlError: 'يرجى إدخال رابط صالح',
+      comingSoonTitle: 'قريبًا',
+      comingSoonDescription: 'أداة فحص اختبار الانسحاب غير مُفعّلة بعد.',
+    },
   },
 
   // Bengali
@@ -2871,6 +2943,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'সেটিংস',
+      walkaway: 'ওয়াক-অ্যাওয়ে টেস্ট',
     },
     settings: {
       title: 'সেটিংস',
@@ -3277,6 +3350,16 @@ export const translations: Translations = {
       required: ' (প্রয়োজন)',
       submit: 'জমা দিন',
     },
+    walkaway: {
+      title: 'ওয়াক-অ্যাওয়ে টেস্ট',
+      explainer:
+        'অ্যাপ বা পরিষেবাটি ওয়াক-অ্যাওয়ে টেস্ট পাস করে কিনা তা যাচাই করুন। আমাদের কোন ইউআরএল যাচাই করা উচিত?',
+      placeholder: 'https://example.com',
+      testButton: 'পরীক্ষা করুন',
+      invalidUrlError: 'একটি বৈধ ইউআরএল লিখুন',
+      comingSoonTitle: 'শীঘ্রই আসছে',
+      comingSoonDescription: 'ওয়াক-অ্যাওয়ে টেস্ট চেকার এখনও তৈরি করা হয়নি।',
+    },
   },
 
   // Russian
@@ -3298,6 +3381,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Настройки',
+      walkaway: 'Тест на уход',
     },
     settings: {
       title: 'Настройки',
@@ -3706,6 +3790,15 @@ export const translations: Translations = {
       required: ' (требуется)',
       submit: 'Отправить',
     },
+    walkaway: {
+      title: 'Тест на уход',
+      explainer: 'Проверьте, проходит ли приложение или сервис тест на уход. Какой URL нам следует проверить?',
+      placeholder: 'https://example.com',
+      testButton: 'Проверить',
+      invalidUrlError: 'Пожалуйста, введите корректный URL',
+      comingSoonTitle: 'Скоро',
+      comingSoonDescription: 'Инструмент проверки теста на уход пока не реализован.',
+    },
   },
 
   // Portuguese
@@ -3727,6 +3820,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Configurações',
+      walkaway: 'Teste de abandono',
     },
     settings: {
       title: 'Configurações',
@@ -4136,6 +4230,15 @@ export const translations: Translations = {
       required: ' (obrigatório)',
       submit: 'Enviar',
     },
+    walkaway: {
+      title: 'Teste de abandono',
+      explainer: 'Verifique se o aplicativo ou serviço passa no teste de abandono. Qual URL devemos verificar?',
+      placeholder: 'https://exemplo.com',
+      testButton: 'Testar',
+      invalidUrlError: 'Insira uma URL válida',
+      comingSoonTitle: 'Em breve',
+      comingSoonDescription: 'O verificador do teste de abandono ainda não foi implementado.',
+    },
   },
 
   // Urdu
@@ -4157,6 +4260,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'ترتیبات',
+      walkaway: 'واک اوے ٹیسٹ',
     },
     settings: {
       title: 'ترتیبات',
@@ -4554,6 +4658,15 @@ export const translations: Translations = {
       satisfied: ' (پورا ہوگیا)',
       required: ' (درکار ہے)',
       submit: 'جمع کروائیں',
+    },
+    walkaway: {
+      title: 'واک اوے ٹیسٹ',
+      explainer: 'چیک کریں کہ آیا ایپ یا سروس واک اوے ٹیسٹ پاس کرتی ہے۔ ہمیں کون سا یو آر ایل چیک کرنا چاہیے؟',
+      placeholder: 'https://example.com',
+      testButton: 'ٹیسٹ کریں',
+      invalidUrlError: 'براہ کرم ایک درست یو آر ایل درج کریں',
+      comingSoonTitle: 'جلد آ رہا ہے',
+      comingSoonDescription: 'واک اوے ٹیسٹ چیکر ابھی تک تیار نہیں کیا گیا۔',
     },
   },
 }
