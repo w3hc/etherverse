@@ -400,7 +400,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Settings',
-      walkaway: 'Walk-Away Test',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'Settings',
@@ -788,14 +788,14 @@ export const translations: Translations = {
       submit: 'Submit',
     },
     walkaway: {
-      title: 'Walk-Away Test',
+      title: 'Walk-away test',
       explainer:
-        'Check if the app or service passes the walk-away test. Which URL should we check?',
+        'Check if the app or service passes the Walk-away test. Which URL should we check?',
       placeholder: 'https://example.com',
       testButton: 'Test',
       invalidUrlError: 'Please enter a valid URL',
       comingSoonTitle: 'Coming soon',
-      comingSoonDescription: "The walk-away test checker isn't implemented yet.",
+      comingSoonDescription: "The Walk-away test checker isn't implemented yet.",
     },
   },
 
@@ -818,7 +818,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: '设置',
-      walkaway: '离场测试',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: '设置',
@@ -1186,13 +1186,13 @@ export const translations: Translations = {
       submit: '提交',
     },
     walkaway: {
-      title: '离场测试',
-      explainer: '检查该应用或服务是否通过离场测试。我们应该检查哪个网址？',
+      title: 'Walk-away test',
+      explainer: '检查该应用或服务是否通过 Walk-away test。我们应该检查哪个网址？',
       placeholder: 'https://example.com',
       testButton: '测试',
       invalidUrlError: '请输入有效的网址',
       comingSoonTitle: '即将推出',
-      comingSoonDescription: '离场测试检查器尚未实现。',
+      comingSoonDescription: 'Walk-away test 检查器尚未实现。',
     },
   },
 
@@ -1215,7 +1215,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'सेटिंग्स',
-      walkaway: 'वॉक-अवे टेस्ट',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'सेटिंग्स',
@@ -1614,13 +1614,13 @@ export const translations: Translations = {
       submit: 'जमा करें',
     },
     walkaway: {
-      title: 'वॉक-अवे टेस्ट',
-      explainer: 'जांचें कि क्या ऐप या सेवा वॉक-अवे टेस्ट पास करती है। हमें कौन सा यूआरएल जांचना चाहिए?',
+      title: 'Walk-away test',
+      explainer: 'जांचें कि क्या ऐप या सेवा Walk-away test पास करती है। हमें कौन सा यूआरएल जांचना चाहिए?',
       placeholder: 'https://example.com',
       testButton: 'टेस्ट करें',
       invalidUrlError: 'कृपया एक मान्य यूआरएल दर्ज करें',
       comingSoonTitle: 'जल्द आ रहा है',
-      comingSoonDescription: 'वॉक-अवे टेस्ट चेकर अभी लागू नहीं किया गया है।',
+      comingSoonDescription: 'Walk-away test चेकर अभी लागू नहीं किया गया है।',
     },
   },
 
@@ -1643,7 +1643,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Configuración',
-      walkaway: 'Prueba de abandono',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'Configuración',
@@ -2055,14 +2055,14 @@ export const translations: Translations = {
       submit: 'Enviar',
     },
     walkaway: {
-      title: 'Prueba de abandono',
+      title: 'Walk-away test',
       explainer:
-        '¿La aplicación o el servicio supera la prueba de abandono? ¿Qué URL deberíamos comprobar?',
+        '¿La aplicación o el servicio supera el Walk-away test? ¿Qué URL deberíamos comprobar?',
       placeholder: 'https://ejemplo.com',
       testButton: 'Probar',
       invalidUrlError: 'Introduce una URL válida',
       comingSoonTitle: 'Próximamente',
-      comingSoonDescription: 'El comprobador de la prueba de abandono aún no está implementado.',
+      comingSoonDescription: 'El comprobador del Walk-away test aún no está implementado.',
     },
   },
 
@@ -2085,7 +2085,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Paramètres',
-      walkaway: "Test de l'abandon",
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'Paramètres',
@@ -2500,14 +2500,14 @@ export const translations: Translations = {
       submit: 'Soumettre',
     },
     walkaway: {
-      title: "Test de l'abandon",
+      title: 'Walk-away test',
       explainer:
-        "Vérifiez si l'application ou le service réussit le test de l'abandon. Quelle URL devrions-nous vérifier ?",
+        "Vérifiez si l'application ou le service réussit le Walk-away test. Quelle URL devrions-nous vérifier ?",
       placeholder: 'https://exemple.com',
       testButton: 'Tester',
       invalidUrlError: 'Veuillez saisir une URL valide',
       comingSoonTitle: 'Bientôt disponible',
-      comingSoonDescription: "Le vérificateur du test de l'abandon n'est pas encore implémenté.",
+      comingSoonDescription: "Le vérificateur du Walk-away test n'est pas encore implémenté.",
     },
   },
 
@@ -2530,7 +2530,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'الإعدادات',
-      walkaway: 'اختبار الانسحاب',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'الإعدادات',
@@ -2914,13 +2914,13 @@ export const translations: Translations = {
       submit: 'إرسال',
     },
     walkaway: {
-      title: 'اختبار الانسحاب',
-      explainer: 'تحقق مما إذا كان التطبيق أو الخدمة يجتاز اختبار الانسحاب. ما هو الرابط الذي يجب أن نتحقق منه؟',
+      title: 'Walk-away test',
+      explainer: 'تحقق مما إذا كان التطبيق أو الخدمة يجتاز Walk-away test. ما هو الرابط الذي يجب أن نتحقق منه؟',
       placeholder: 'https://example.com',
       testButton: 'اختبار',
       invalidUrlError: 'يرجى إدخال رابط صالح',
       comingSoonTitle: 'قريبًا',
-      comingSoonDescription: 'أداة فحص اختبار الانسحاب غير مُفعّلة بعد.',
+      comingSoonDescription: 'أداة فحص Walk-away test غير مُفعّلة بعد.',
     },
   },
 
@@ -2943,7 +2943,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'সেটিংস',
-      walkaway: 'ওয়াক-অ্যাওয়ে টেস্ট',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'সেটিংস',
@@ -3351,14 +3351,14 @@ export const translations: Translations = {
       submit: 'জমা দিন',
     },
     walkaway: {
-      title: 'ওয়াক-অ্যাওয়ে টেস্ট',
+      title: 'Walk-away test',
       explainer:
-        'অ্যাপ বা পরিষেবাটি ওয়াক-অ্যাওয়ে টেস্ট পাস করে কিনা তা যাচাই করুন। আমাদের কোন ইউআরএল যাচাই করা উচিত?',
+        'অ্যাপ বা পরিষেবাটি Walk-away test পাস করে কিনা তা যাচাই করুন। আমাদের কোন ইউআরএল যাচাই করা উচিত?',
       placeholder: 'https://example.com',
       testButton: 'পরীক্ষা করুন',
       invalidUrlError: 'একটি বৈধ ইউআরএল লিখুন',
       comingSoonTitle: 'শীঘ্রই আসছে',
-      comingSoonDescription: 'ওয়াক-অ্যাওয়ে টেস্ট চেকার এখনও তৈরি করা হয়নি।',
+      comingSoonDescription: 'Walk-away test চেকার এখনও তৈরি করা হয়নি।',
     },
   },
 
@@ -3381,7 +3381,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Настройки',
-      walkaway: 'Тест на уход',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'Настройки',
@@ -3791,13 +3791,13 @@ export const translations: Translations = {
       submit: 'Отправить',
     },
     walkaway: {
-      title: 'Тест на уход',
-      explainer: 'Проверьте, проходит ли приложение или сервис тест на уход. Какой URL нам следует проверить?',
+      title: 'Walk-away test',
+      explainer: 'Проверьте, проходит ли приложение или сервис Walk-away test. Какой URL нам следует проверить?',
       placeholder: 'https://example.com',
       testButton: 'Проверить',
       invalidUrlError: 'Пожалуйста, введите корректный URL',
       comingSoonTitle: 'Скоро',
-      comingSoonDescription: 'Инструмент проверки теста на уход пока не реализован.',
+      comingSoonDescription: 'Инструмент проверки Walk-away test пока не реализован.',
     },
   },
 
@@ -3820,7 +3820,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'Configurações',
-      walkaway: 'Teste de abandono',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'Configurações',
@@ -4231,13 +4231,13 @@ export const translations: Translations = {
       submit: 'Enviar',
     },
     walkaway: {
-      title: 'Teste de abandono',
-      explainer: 'Verifique se o aplicativo ou serviço passa no teste de abandono. Qual URL devemos verificar?',
+      title: 'Walk-away test',
+      explainer: 'Verifique se o aplicativo ou serviço passa no Walk-away test. Qual URL devemos verificar?',
       placeholder: 'https://exemplo.com',
       testButton: 'Testar',
       invalidUrlError: 'Insira uma URL válida',
       comingSoonTitle: 'Em breve',
-      comingSoonDescription: 'O verificador do teste de abandono ainda não foi implementado.',
+      comingSoonDescription: 'O verificador do Walk-away test ainda não foi implementado.',
     },
   },
 
@@ -4260,7 +4260,7 @@ export const translations: Translations = {
     },
     navigation: {
       settings: 'ترتیبات',
-      walkaway: 'واک اوے ٹیسٹ',
+      walkaway: 'Walk-away test',
     },
     settings: {
       title: 'ترتیبات',
@@ -4660,13 +4660,13 @@ export const translations: Translations = {
       submit: 'جمع کروائیں',
     },
     walkaway: {
-      title: 'واک اوے ٹیسٹ',
-      explainer: 'چیک کریں کہ آیا ایپ یا سروس واک اوے ٹیسٹ پاس کرتی ہے۔ ہمیں کون سا یو آر ایل چیک کرنا چاہیے؟',
+      title: 'Walk-away test',
+      explainer: 'چیک کریں کہ آیا ایپ یا سروس Walk-away test پاس کرتی ہے۔ ہمیں کون سا یو آر ایل چیک کرنا چاہیے؟',
       placeholder: 'https://example.com',
       testButton: 'ٹیسٹ کریں',
       invalidUrlError: 'براہ کرم ایک درست یو آر ایل درج کریں',
       comingSoonTitle: 'جلد آ رہا ہے',
-      comingSoonDescription: 'واک اوے ٹیسٹ چیکر ابھی تک تیار نہیں کیا گیا۔',
+      comingSoonDescription: 'Walk-away test چیکر ابھی تک تیار نہیں کیا گیا۔',
     },
   },
 }

@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { Box, VStack, Heading, Text } from '@chakra-ui/react'
+import Link from 'next/link'
+import { Box, VStack, Heading, Text, HStack } from '@chakra-ui/react'
+import { FiExternalLink } from 'react-icons/fi'
 import { Input } from '@/components/ui/input'
 import { Field } from '@/components/ui/field'
 import { Button } from '@/components/ui/button'
@@ -86,6 +88,15 @@ export default function WalkawayPage() {
             {t.walkaway.testButton}
           </Button>
         </VStack>
+
+        <Box textAlign="center">
+          <Link href="/walkaway/w3pk">
+            <HStack justify="center" gap={1} color={brandColors.accent} display="inline-flex">
+              <Text fontSize="sm">View sample report: w3pk</Text>
+              <FiExternalLink size={14} />
+            </HStack>
+          </Link>
+        </Box>
       </VStack>
     </Box>
   )
