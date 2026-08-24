@@ -1615,7 +1615,8 @@ export const translations: Translations = {
     },
     walkaway: {
       title: 'Walk-away test',
-      explainer: 'जांचें कि क्या ऐप या सेवा Walk-away test पास करती है। हमें कौन सा यूआरएल जांचना चाहिए?',
+      explainer:
+        'जांचें कि क्या ऐप या सेवा Walk-away test पास करती है। हमें कौन सा यूआरएल जांचना चाहिए?',
       placeholder: 'https://example.com',
       testButton: 'टेस्ट करें',
       invalidUrlError: 'कृपया एक मान्य यूआरएल दर्ज करें',
@@ -2915,7 +2916,8 @@ export const translations: Translations = {
     },
     walkaway: {
       title: 'Walk-away test',
-      explainer: 'تحقق مما إذا كان التطبيق أو الخدمة يجتاز Walk-away test. ما هو الرابط الذي يجب أن نتحقق منه؟',
+      explainer:
+        'تحقق مما إذا كان التطبيق أو الخدمة يجتاز Walk-away test. ما هو الرابط الذي يجب أن نتحقق منه؟',
       placeholder: 'https://example.com',
       testButton: 'اختبار',
       invalidUrlError: 'يرجى إدخال رابط صالح',
@@ -3792,7 +3794,8 @@ export const translations: Translations = {
     },
     walkaway: {
       title: 'Walk-away test',
-      explainer: 'Проверьте, проходит ли приложение или сервис Walk-away test. Какой URL нам следует проверить?',
+      explainer:
+        'Проверьте, проходит ли приложение или сервис Walk-away test. Какой URL нам следует проверить?',
       placeholder: 'https://example.com',
       testButton: 'Проверить',
       invalidUrlError: 'Пожалуйста, введите корректный URL',
@@ -4232,7 +4235,8 @@ export const translations: Translations = {
     },
     walkaway: {
       title: 'Walk-away test',
-      explainer: 'Verifique se o aplicativo ou serviço passa no Walk-away test. Qual URL devemos verificar?',
+      explainer:
+        'Verifique se o aplicativo ou serviço passa no Walk-away test. Qual URL devemos verificar?',
       placeholder: 'https://exemplo.com',
       testButton: 'Testar',
       invalidUrlError: 'Insira uma URL válida',
@@ -4661,7 +4665,8 @@ export const translations: Translations = {
     },
     walkaway: {
       title: 'Walk-away test',
-      explainer: 'چیک کریں کہ آیا ایپ یا سروس Walk-away test پاس کرتی ہے۔ ہمیں کون سا یو آر ایل چیک کرنا چاہیے؟',
+      explainer:
+        'چیک کریں کہ آیا ایپ یا سروس Walk-away test پاس کرتی ہے۔ ہمیں کون سا یو آر ایل چیک کرنا چاہیے؟',
       placeholder: 'https://example.com',
       testButton: 'ٹیسٹ کریں',
       invalidUrlError: 'براہ کرم ایک درست یو آر ایل درج کریں',

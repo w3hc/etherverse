@@ -13,7 +13,13 @@ import {
   Spinner,
   Center,
 } from '@chakra-ui/react'
-import { FiCheckCircle, FiXCircle, FiExternalLink, FiAlertTriangle, FiTrendingUp } from 'react-icons/fi'
+import {
+  FiCheckCircle,
+  FiXCircle,
+  FiExternalLink,
+  FiAlertTriangle,
+  FiTrendingUp,
+} from 'react-icons/fi'
 import { toaster } from '@/components/ui/toaster'
 import { brandColors } from '@/theme'
 
@@ -134,7 +140,12 @@ export default function W3pkWalkawayReportPage() {
 
         {/* Score */}
         <Box textAlign="center" bg="whiteAlpha.100" borderRadius="xl" py={8}>
-          <Text fontSize="6xl" fontWeight="bold" color={scoreColor(report.walkaway_score)} lineHeight="1">
+          <Text
+            fontSize="6xl"
+            fontWeight="bold"
+            color={scoreColor(report.walkaway_score)}
+            lineHeight="1"
+          >
             {report.walkaway_score}
           </Text>
           <Text color="gray.400" mb={3}>
@@ -147,7 +158,9 @@ export default function W3pkWalkawayReportPage() {
               px={3}
               py={1}
             >
-              {report.passes_the_walkaway_test ? 'Passes the walk-away test' : 'Fails the walk-away test'}
+              {report.passes_the_walkaway_test
+                ? 'Passes the walk-away test'
+                : 'Fails the walk-away test'}
             </Badge>
             <Badge colorPalette="gray" size="lg" px={3} py={1} textTransform="capitalize">
               {report.confidence} confidence
@@ -183,7 +196,11 @@ export default function W3pkWalkawayReportPage() {
                 align="flex-start"
               >
                 {passed ? (
-                  <FiCheckCircle color="#4ade80" size={20} style={{ marginTop: 2, flexShrink: 0 }} />
+                  <FiCheckCircle
+                    color="#4ade80"
+                    size={20}
+                    style={{ marginTop: 2, flexShrink: 0 }}
+                  />
                 ) : (
                   <FiXCircle color="#f87171" size={20} style={{ marginTop: 2, flexShrink: 0 }} />
                 )}
