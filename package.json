@@ -15,7 +15,7 @@
     "db:migrate": "node --env-file=.env scripts/migrate.mjs"
   },
   "dependencies": {
-    "@chakra-ui/react": "^3.33.0",
+    "@chakra-ui/react": "^3.36.1",
     "@emotion/react": "^11.14.0",
     "@neondatabase/serverless": "^1.0.2",
     "@types/react-syntax-highlighter": "^15.5.13",
