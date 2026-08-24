@@ -12,5 +12,6 @@ function getSql(): NeonQueryFunction<false, false> {
   return cached
 }
 
-export const sql: NeonQueryFunction<false, false> = ((...args: Parameters<NeonQueryFunction<false, false>>) =>
-  getSql()(...args)) as NeonQueryFunction<false, false>
+export const sql: NeonQueryFunction<false, false> = ((
+  ...args: Parameters<NeonQueryFunction<false, false>>
+) => getSql()(...args)) as NeonQueryFunction<false, false>
